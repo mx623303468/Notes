@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/app.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./app.js":
-/*!****************!*\
-  !*** ./app.js ***!
-  \****************/
+/***/ "./src/app.ts":
+/*!********************!*\
+  !*** ./src/app.ts ***!
+  \********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var func = function func() {};\n\nvar NUM = 45;\nvar arr = [1, 2, 4];\nvar arrB = arr.map(function (item) {\n  return item * 2;\n});\nconsole.log('new Set(arrB)', new Set(arrB));\n\n//# sourceURL=webpack:///./app.js?");
+eval("var NUM = 45;\r\nfunction touCat(cat) {\r\n    console.log('miao~', cat.name);\r\n}\r\ntouCat({\r\n    name: 'tom',\r\n    gender: 'male'\r\n});\r\n\n\n//# sourceURL=webpack:///./src/app.ts?");
 
 /***/ })
 
