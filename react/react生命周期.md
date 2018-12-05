@@ -4,13 +4,9 @@
 >
 > ​	生命周期函数就是在组件运行到某一个时刻的时候，会自动执行的函数。
 
-
-
 ![img](./react生命周期.assets/timg.jpg) 
 
-
 ![img](./react生命周期.assets/1.jpg)
-
 
 ## 1. `initialization`
 
@@ -22,7 +18,6 @@
   - 在组件即将被第一次挂载到页面的时刻自动执行  
 - `componentDidMount`
   - 在组件第一次挂载到页面完成后自动执行
-
 
 
 ## 3. `Updation`
