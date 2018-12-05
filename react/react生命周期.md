@@ -6,10 +6,10 @@
 
 
 
-![img](.\react生命周期.assets\timg.jpg) 
+![img](./react生命周期.assets/timg.jpg) 
 
 
-![img](.\react生命周期.assets\1.jpg)
+![img](./react生命周期.assets/1.jpg)
 
 
 ## 1. `initialization`
