@@ -23,6 +23,7 @@
 
 ## [Vue](./Vue)
 - [封装一个迷你的Vue框架](./Vue/封装一个迷你Vue框架.md) | 实现vue框架的部分核心功能
+- [vue-cli 教程](./Vue./vue-cli(vue脚手架)超详细教程.md) | vue-cli 安装使用的详细教程
 
 
 
