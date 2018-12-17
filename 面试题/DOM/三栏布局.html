@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>三栏布局</title>
+
+  <style>
+    html *{
+      margin: 0;
+      padding: 0;
+    }
+    .layout{
+      margin-bottom: 30px;
+    }
+    .layout > article > div{
+      min-height: 100px;
+    }
+    .layout .left{
+      background-color: red;
+    }
+    .layout .center{
+      background-color: skyblue;
+    }
+    .layout .right{
+      background-color: yellowgreen;
+    }
+  </style>
+</head>
+<body>
+  <!-- 假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px,中间自适应 -->
+
+  <!-- 1. 浮动解决方案 -->
+  <section class="layout float">
+    <style>
+      .layout.float .left{
+        float: left;
+        width: 300px;
+      }
+      .layout.float .right{
+        float: right;
+        width: 300px;
+      }
+    </style>
+    <article class="wrap">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="center">
+        <h1>浮动解决方案</h1>
+        <p>这是中间的内容</p>
+        <p>这是中间的内容</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 2. 定位解决方案 -->
+  <section class="layout position">
+    <style>
+      .layout.position > .wrap > div{
+        position: absolute;
+      }
+      .layout.position .center{
+        left: 300px;
+        right: 300px;
+      }
+      .layout.position .left{
+        left: 0;
+        width: 300px;
+      }
+      .layout.position .right{
+        right: 0;
+        width: 300px;
+      }
+    </style>
+    <article class="wrap">
+      <div class="left"></div>
+      <div class="center">
+        <h1>定位解决方案</h1>
+        <p>这是中间的内容</p>
+        <p>这是中间的内容</p>
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+
+  <!-- 3. flexbox 解决方案 -->
+  <section class="layout flex">
+    <style>
+      .layout.flex{
+        margin-top: 160px;
+      }
+      .layout.flex > article {
+        display: flex;
+      }
+      .layout.flex .left{
+        width: 300px;
+      }
+      .layout.flex .center{
+        flex: 1;
+      }
+      .layout.flex .right{
+        width: 300px;
+      }
+    </style>
+    <article class="wrap">
+      <div class="left"></div>
+      <div class="center">
+        <h1>flexbox 解决方案</h1>
+        <p>这是中间的内容</p>
+        <p>这是中间的内容</p>
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+
+  <!-- 4. 表格布局 -->
+  <section class="layout table">
+    <style>
+      .layout.table .wrap{
+        width: 100%;
+        display: table;
+      }
+      .layout.table .wrap > div{
+        display: table-cell;
+      }
+      .layout.table .left{
+        width: 300px;
+      }
+      .layout.table .right{
+        width: 300px;
+      }
+    </style>
+    <article class="wrap">
+      <div class="left"></div>
+      <div class="center">
+        <h1>表格布局解决方案</h1>
+        <p>这是中间的内容</p>
+        <p>这是中间的内容</p>
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+
+  <!-- 5. 网格布局 -->
+  <section class="layout grid">
+    <style>
+      .layout.grid > .wrap{
+        display: grid;
+        width: 100%;
+        grid-template-rows: 100px;
+        grid-template-columns: 300px auto 300px;
+      }
+    </style>
+    <article class="wrap">
+      <div class="left"></div>
+      <div class="center">
+        <h1>网格布局解决方案</h1>
+        <p>这是中间的内容</p>
+        <p>这是中间的内容</p>
+      </div>
+      <div class="right"></div>
+    </article>
+  </section>
+</body>
+</html>
