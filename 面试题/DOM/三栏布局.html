@@ -30,6 +30,7 @@
 </head>
 <body>
   <!-- 假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px,中间自适应 -->
+  <!-- 高度未知时，只有 flex布局，表格布局可以完美适应，其他布局会有问题，需要单独处理 -->
 
   <!-- 1. 浮动解决方案 -->
   <section class="layout float">
@@ -84,7 +85,7 @@
     </article>
   </section>
 
-  <!-- 3. flexbox 解决方案 -->
+  <!-- 3. flex布局 解决方案 -->
   <section class="layout flex">
     <style>
       .layout.flex{
